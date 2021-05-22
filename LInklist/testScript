@@ -1,0 +1,20 @@
+#! /bin/bash
+
+if ( make )
+then
+  echo "Project Build Successfully"
+else
+  echo "Project Build Failed"
+fi
+
+rm -f *.o
+
+read -n1 -p "Do you want to run this project(y/n)"
+echo
+if [ $REPLY = 'y' ]
+then
+  ./run
+else
+  echo "Program run failed"
+fi
+
